@@ -1,0 +1,12 @@
+obj
+bin
+/.vs
+/FM21.Database/FM21.Database.dbmdl
+/FM21.Database/FM21.Database.jfm
+/FM21.API/Properties/PublishProfiles/FolderProfile.pubxml.user
+/FM21.API/Properties/PublishProfiles/FolderProfile.pubxml
+/FM21.API/APILog
+/FM21.Tests/TestResults/html
+/FM21.Tests/TestResults/coverage.cobertura.xml
+/FM21.Tests/coverage.json
+/FM21.Tests/.sonarqube

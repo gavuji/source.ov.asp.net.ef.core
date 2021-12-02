@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.API", "FM21.API\FM21.API.csproj", "{666D45F6-7C40-4D20-B685-7061E6D4B4AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.Core", "FM21.Core\FM21.Core.csproj", "{C8D11CE3-DB1B-4839-B11F-590BCB9C2966}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.Data", "FM21.Data\FM21.Data.csproj", "{529221E5-4571-4E7E-BB90-70118127194E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.Service", "FM21.Service\FM21.Service.csproj", "{78DE95D2-C612-41EF-A209-C843E0AE3020}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.Entities", "FM21.Entities\FM21.Entities.csproj", "{0607ECDD-A75E-4EB3-8AA2-08BA2B25BA27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FM21.Tests", "FM21.Tests\FM21.Tests.csproj", "{016DD308-06E5-40C9-9451-DC6A81AD5502}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FM21.Database", "FM21.Database\FM21.Database.sqlproj", "{E553D652-0D85-4162-80CD-22E65AD9FCC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{466076A8-EE9F-4323-A67E-D5AD90A555DB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{666D45F6-7C40-4D20-B685-7061E6D4B4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666D45F6-7C40-4D20-B685-7061E6D4B4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666D45F6-7C40-4D20-B685-7061E6D4B4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666D45F6-7C40-4D20-B685-7061E6D4B4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D11CE3-DB1B-4839-B11F-590BCB9C2966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D11CE3-DB1B-4839-B11F-590BCB9C2966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D11CE3-DB1B-4839-B11F-590BCB9C2966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D11CE3-DB1B-4839-B11F-590BCB9C2966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529221E5-4571-4E7E-BB90-70118127194E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529221E5-4571-4E7E-BB90-70118127194E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529221E5-4571-4E7E-BB90-70118127194E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529221E5-4571-4E7E-BB90-70118127194E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DE95D2-C612-41EF-A209-C843E0AE3020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DE95D2-C612-41EF-A209-C843E0AE3020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DE95D2-C612-41EF-A209-C843E0AE3020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DE95D2-C612-41EF-A209-C843E0AE3020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0607ECDD-A75E-4EB3-8AA2-08BA2B25BA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0607ECDD-A75E-4EB3-8AA2-08BA2B25BA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0607ECDD-A75E-4EB3-8AA2-08BA2B25BA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0607ECDD-A75E-4EB3-8AA2-08BA2B25BA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{016DD308-06E5-40C9-9451-DC6A81AD5502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{016DD308-06E5-40C9-9451-DC6A81AD5502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{016DD308-06E5-40C9-9451-DC6A81AD5502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{016DD308-06E5-40C9-9451-DC6A81AD5502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E553D652-0D85-4162-80CD-22E65AD9FCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E553D652-0D85-4162-80CD-22E65AD9FCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBAFD922-605F-43B9-8FA4-82623503EEB3}
+	EndGlobalSection
+EndGlobal

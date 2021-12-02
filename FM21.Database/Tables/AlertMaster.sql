@@ -1,0 +1,14 @@
+﻿CREATE TABLE AlertMaster
+(
+	AlertID INT IDENTITY(1,1) NOT NULL,
+	AlertType VARCHAR(20) NOT NULL,
+	AlertCode VARCHAR(20),
+	AlertDescription VARCHAR(300),
+	IsActive BIT NOT NULL CONSTRAINT DF_AlertMaster_IsActive DEFAULT(1),
+	IsDeleted BIT NOT NULL CONSTRAINT DF_AlertMaster_IsDeleted DEFAULT(0),
+	CreatedBy INT,
+	CreatedOn DATETIME NOT NULL CONSTRAINT DF_AlertMaster_CreatedOn DEFAULT(GETDATE()),
+	UpdatedBy INT,
+	UpdatedOn DATETIME,
+	CONSTRAINT PK_AlertMaster PRIMARY KEY (AlertID)
+)

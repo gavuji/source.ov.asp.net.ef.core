@@ -1,0 +1,36 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.1
+
+stages:
+    - build
+    - test
+    - release
+
+variables:
+  GIT_SSL_NO_VERIFY: "true"
+
+before_script:
+  - dotnet restore
+
+build:
+    stage: build  
+    script:
+        - 'dotnet build'
+
+test:
+    stage: test  
+    script: 
+        - "dotnet test"
+
+release:
+  stage: release
+  when: manual
+  only:
+    - develop
+  artifacts:
+    paths:
+     - 'E:\FM21.API'
+  script:
+    - New-Item -Path "E:\Backup\" -Name (get-date).ToString("yyyyMMdd") -ItemType "directory" -Force
+    - powershell Compress-Archive "E:\FM21.API" "E:\Backup\$((get-date).ToString("yyyyMMdd"))\FM21.API_Backup_$CI_JOB_ID.zip"
+    - dotnet publish -c release -o 'E:\FM21.API' --self-contained false
+    - cp E:\FM21.API\web.UAT.config E:\FM21.API\web.config

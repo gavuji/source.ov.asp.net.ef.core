@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>FM21.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e553d652-0d85-4162-80cd-22e65ad9fcc9}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>FM21.Database</RootNamespace>
+    <AssemblyName>FM21.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Procedures" />
+    <Folder Include="Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\SiteMaster.sql" />
+    <Build Include="Tables\InstructionMaster.sql" />
+    <Build Include="Tables\InstructionCategoryMaster.sql" />
+    <Build Include="Tables\UserMaster.sql" />
+    <Build Include="Tables\RoleMaster.sql" />
+    <Build Include="Tables\PermissionMaster.sql" />
+    <Build Include="Tables\RolePermissionMapping.sql" />
+    <Build Include="Tables\UserRole.sql" />
+    <Build Include="Tables\SupplierMaster.sql" />
+    <Build Include="Tables\Customer.sql" />
+    <Build Include="Tables\SiteInstructionCategoryMapping.sql" />
+    <Build Include="Tables\InstructionGroupMaster.sql" />
+    <Build Include="Tables\RegulatoryMaster.sql" />
+    <Build Include="Tables\AllergenMaster.sql" />
+    <Build Include="Tables\ProductTypeMaster.sql" />
+    <Build Include="Tables\SiteProductTypeMapping.sql" />
+    <Build Include="Tables\ProjectMaster.sql" />
+    <Build Include="Tables\NutrientMaster.sql" />
+    <Build Include="Tables\NutrientTypeMaster.sql" />
+    <Build Include="Tables\ClaimMaster.sql" />
+    <Build Include="Tables\FormulaMaster.sql" />
+    <Build Include="Tables\FormulaClaimMapping.sql" />
+    <Build Include="Tables\CriteriaMaster.sql" />
+    <Build Include="Tables\FormulaCriteriaMapping.sql" />
+    <Build Include="Procedures\rptFormulaClaims.sql" />
+    <Build Include="Procedures\rptFormulaCriteria.sql" />
+    <Build Include="Procedures\rptFormulaNotes.sql" />
+    <Build Include="Tables\AlertMaster.sql" />
+    <Build Include="Tables\CountryMaster.sql" />
+    <Build Include="Tables\IngredientCategoryMaster.sql" />
+    <Build Include="Tables\RMStatusMaster.sql" />
+    <Build Include="Tables\UnitOfMeasurementMaster.sql" />
+    <Build Include="Tables\IngredientMaster.sql" />
+    <Build Include="Tables\IngredientAllergenMapping.sql" />
+    <Build Include="Tables\IngredientNutrientMapping.sql" />
+    <Build Include="Tables\IngredientSitePartMapping.sql" />
+    <Build Include="Tables\IngredientSupplierMapping.sql" />
+    <Build Include="Tables\KosherCodeMaster.sql" />
+    <Build Include="Tables\StorageConditionMaster.sql" />
+    <Build Include="Tables\BrokerMaster.sql" />
+    <Build Include="Tables\HACCPMaster.sql" />
+    <Build Include="Procedures\GetSupplierByIngredientID.sql" />
+    <Build Include="Procedures\GetNutrientByIngredientID.sql" />
+    <Build Include="Tables\AutoGenerateCode.sql" />
+    <Build Include="Functions\Split.sql" />
+    <Build Include="Procedures\SearchIngredient.sql" />
+    <Build Include="Functions\GetIngredientDynamicCondition.sql" />
+    <Build Include="Tables\IngredientSearchHistory.sql" />
+    <Build Include="Procedures\GetIngredientReport.sql" />
+    <Build Include="Procedures\GetIngredientCustomReport.sql" />
+    <Build Include="Functions\GetColumnByParams.sql" />
+    <Build Include="Procedures\GetIngredientPartInfo.sql" />
+    <Build Include="Procedures\GetFormulaDetailsByFormulaID.sql" />
+    <Build Include="Tables\FormulaDetailMapping.sql" />
+    <Build Include="Tables\FormulaTypeMaster.sql" />
+    <Build Include="Tables\ProductionLineMaster.sql" />
+    <Build Include="Tables\ProductionMixerMaster.sql" />
+    <Build Include="Tables\ProductionLineMixerMapping.sql" />
+    <Build Include="Tables\SiteProductionLineMapping.sql" />
+    <Build Include="Tables\BarFormatMaster.sql" />
+    <Build Include="Tables\DatasheetFormatMaster.sql" />
+    <Build Include="Tables\FormulaDatasheetMapping.sql" />
+    <Build Include="Tables\FormulaRegulatoryCategoryMaster.sql" />
+    <Build Include="Tables\FormulaStatusMaster.sql" />
+    <Build Include="Tables\FormulaTypeProductMapping.sql" />
+    <Build Include="Tables\PkoPercentageMaster.sql" />
+    <Build Include="Tables\UnitServingMaster.sql" />
+    <Build Include="Tables\PowderUnitServingSiteMapping.sql" />
+    <Build Include="Tables\ReleaseAgentMaster.sql" />
+    <Build Include="Procedures\SearchFormula.sql" />
+    <Build Include="Procedures\GetIngredientForFormula.sql" />
+    <Build Include="Functions\GetFormulaDynamicCondition.sql" />
+    <Build Include="Tables\FormulaChangeCode.sql" />
+    <Build Include="Tables\FormulaRevision.sql" />
+    <Build Include="Tables\SiteProcessCode.sql" />
+    <Build Include="Procedures\GetFormulaHomePageHeaderInfo.sql" />
+    <Build Include="Procedures\GetFormulaChangeCodes.sql" />
+    <Build Include="Tables\FormulaProductionLineMapping.sql" />
+    <Build Include="Tables\SitterWidthMaster.sql" />
+    <Build Include="Tables\ExtrusionDieMaster.sql" />
+    <Build Include="Tables\InternalQCMAVLookUpMaster.sql" />
+    <Build Include="Tables\FormulaRossCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="FM21.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\StaticMasterData.sql" />
+  </ItemGroup>
+</Project>

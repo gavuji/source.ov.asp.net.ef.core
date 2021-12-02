@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c3cfd1f8-e495-46d3-bdab-c5e81ef9ed22" ChangeDateTime="07/01/2020 10:15:22">
+    <Property Name="ElementName" Value="[dbo].[AllergenMaster].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AllergenMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AllergenID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1becd479-a805-4120-9c3f-2532d5cca67b" ChangeDateTime="07/01/2020 10:20:28">
+    <Property Name="ElementName" Value="[dbo].[AllergenMaster].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AllergenMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AllergenId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4b0654d4-9a1a-4776-8146-3061927d1c78" ChangeDateTime="07/03/2020 08:25:36">
+    <Property Name="ElementName" Value="[dbo].[AllergenMaster].[Status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AllergenMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsActive" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c58cd6bb-12ab-48f1-8940-a6ba8cb5d292" ChangeDateTime="07/03/2020 08:28:13">
+    <Property Name="ElementName" Value="[dbo].[SupplierMaster].[Status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SupplierMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsActive" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0f4fd29a-3e0c-4999-89ba-4188e84e6aa7" ChangeDateTime="08/20/2020 07:29:21">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[RegulatoryStatus]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RegulatoryStatusID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="82ce8284-586e-49c8-be2f-4c91c2bd80b2" ChangeDateTime="08/20/2020 07:29:26">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[SterilizationMethod]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SterilizationMethodID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4de05c87-94e9-410a-8f04-30f1fedea3a9" ChangeDateTime="08/20/2020 07:29:32">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[GlutenStatus]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GlutenStatusID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce206073-7845-435b-a29c-94f097f473d9" ChangeDateTime="08/20/2020 07:29:42">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[OrganicStatus]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrganicStatusID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7e3e1fb0-106f-437c-8ded-21ecf04dc342" ChangeDateTime="09/03/2020 14:19:37">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[IsPorkPresent]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PorkPresent" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0ef65c4f-228f-41ef-9709-5f08253e2c09" ChangeDateTime="09/03/2020 14:19:57">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[WADADate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="WADAYear" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="972f519b-0f82-4eef-ac29-be21542a44e8" ChangeDateTime="09/04/2020 14:50:04">
+    <Property Name="ElementName" Value="[dbo].[IngredientMaster].[General_RM_Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[IngredientMaster]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GeneralRMDescription" />
+  </Operation>
+</Operations>

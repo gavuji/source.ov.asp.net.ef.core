@@ -1,0 +1,12 @@
+﻿CREATE TABLE UserMaster
+(
+	UserID INT IDENTITY(1, 1) NOT NULL,
+	DomainFullName VARCHAR(100) NOT NULL,
+	DisplayName VARCHAR(50) NOT NULL,
+	IsDeleted BIT NOT NULL CONSTRAINT DF_UserMaster_IsDeleted DEFAULT(0),
+	CreatedBy INT,
+	CreatedOn DATETIME NOT NULL CONSTRAINT DF_UserMaster_CreatedOn DEFAULT(GETDATE()),
+	UpdatedBy INT,
+	UpdatedOn DATETIME,
+	CONSTRAINT PK_UserMaster PRIMARY KEY (UserID)
+)

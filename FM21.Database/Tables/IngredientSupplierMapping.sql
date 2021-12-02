@@ -1,0 +1,28 @@
+﻿CREATE TABLE IngredientSupplierMapping
+(
+	IngredientSupplierID INT IDENTITY(1,1) NOT NULL,
+	IngredientID INT,
+	BrokerID INT,
+	ManufactureID INT,
+	SiteID INT,
+	KosherCodeID INT,
+	BrokerDetail VARCHAR(100),
+	ManufactureDetail VARCHAR(100),
+	BrokerDescription VARCHAR(200),
+	ManufactureDescription VARCHAR(200),
+	ManufactureLocation VARCHAR(50),
+	KosherAgency VARCHAR(300),
+	Price DECIMAL(18, 4),
+	QuotedDate DATETIME,
+	KosherExpireDate DATETIME,
+	CreatedBy INT,
+	CreatedOn DATETIME NOT NULL CONSTRAINT DF_IngredientSupplierMapping_CreatedOn DEFAULT(GETDATE()),
+	UpdatedBy INT,
+	UpdatedOn DATETIME,
+	CONSTRAINT PK_IngredientSupplierMapping PRIMARY KEY (IngredientSupplierID),
+	CONSTRAINT FK_IngredientSupplierMapping_BrokerMaster FOREIGN KEY (BrokerID) REFERENCES BrokerMaster(BrokerID),
+	CONSTRAINT FK_IngredientSupplierMapping_IngredientMaster FOREIGN KEY (IngredientID) REFERENCES IngredientMaster(IngredientID),
+	CONSTRAINT FK_IngredientSupplierMapping_KosherCodeMaster FOREIGN KEY (KosherCodeID) REFERENCES KosherCodeMaster(KosherCodeID),
+	CONSTRAINT FK_IngredientSupplierMapping_SupplierMaster FOREIGN KEY (ManufactureID) REFERENCES SupplierMaster(SupplierID),
+	CONSTRAINT FK_IngredientSupplierMapping_SiteMaster FOREIGN KEY (SiteID) REFERENCES SiteMaster(SiteID)
+)

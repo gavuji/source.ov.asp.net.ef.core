@@ -1,0 +1,51 @@
+﻿CREATE FUNCTION dbo.Split
+(
+	@String NVARCHAR(4000), 
+	@Delimiter CHAR(1)
+)
+RETURNS @Results TABLE 
+(
+	ItemID INT,
+	ItemValue NVARCHAR(4000)
+)
+AS
+BEGIN
+
+	DECLARE @Index INT, @RowIndex INT = 1
+	DECLARE @Slice NVARCHAR(4000)
+
+	-- HAVE TO SET TO 1 SO IT DOESNT EQUAL ZERO FIRST TIME IN LOOP
+	SELECT @Index = 1
+
+	IF(@String IS NULL)
+		SET @String = ''
+
+	WHILE( @Index != 0 )
+	BEGIN
+
+		-- GET THE INDEX OF THE FIRST OCCURENCE OF THE SPLIT CHARACTER
+		SELECT @Index = CHARINDEX(@Delimiter, @String)
+
+		-- NOW PUSH EVERYTHING TO THE LEFT OF IT INTO THE SLICE VARIABLE
+		IF(@Index != 0)
+			SELECT @Slice = LEFT(@String, @Index - 1)
+		ELSE
+			SELECT @Slice = @String
+
+		-- PUT THE ITEM INTO THE RESULTS SET
+		INSERT INTO @Results(ItemID, ItemValue) VALUES (@RowIndex, @Slice)
+
+		-- CHOP THE ITEM REMOVED OFF THE MAIN STRING
+		SELECT @String = RIGHT(@String, LEN(@String) - @Index)
+
+		-- BREAK OUT IF WE ARE DONE
+		IF LEN(@String) = 0 
+			BREAK
+
+		SET @RowIndex += 1
+
+	END
+
+	RETURN;
+
+END

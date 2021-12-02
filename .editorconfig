@@ -1,0 +1,31 @@
+﻿[*.cs]
+
+# S1854: Unused assignments should be removed
+dotnet_diagnostic.S1854.severity = none
+
+# S112: General exceptions should never be thrown
+dotnet_diagnostic.S112.severity = none
+
+# S3445: Exceptions should not be explicitly rethrown
+dotnet_diagnostic.S3445.severity = none
+
+# S5773: Types allowed to be deserialized should be restricted
+dotnet_diagnostic.S5773.severity = none
+
+# S101: Types should be named in PascalCase
+dotnet_diagnostic.S101.severity = none
+
+# S1104: Fields should not have public accessibility
+dotnet_diagnostic.S1104.severity = none
+
+# S2223: Non-constant static fields should not be visible
+dotnet_diagnostic.S2223.severity = none
+
+# S3010: Static fields should not be updated in constructors
+dotnet_diagnostic.S3010.severity = none
+
+# S125: Sections of code should not be commented out
+dotnet_diagnostic.S125.severity = none
+
+# S2187: TestCases should contain tests
+dotnet_diagnostic.S2187.severity = none

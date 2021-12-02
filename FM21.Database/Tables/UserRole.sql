@@ -1,0 +1,13 @@
+﻿CREATE TABLE UserRole 
+(
+    UserRoleID INT IDENTITY(1,1) NOT NULL,
+    UserID INT NOT NULL,
+	RoleID INT NOT NULL,
+	CreatedBy INT,
+	CreatedOn DATETIME NOT NULL CONSTRAINT DF_UserRole_CreatedOn DEFAULT(GETDATE()),
+	UpdatedBy INT,
+	UpdatedOn DATETIME,
+	CONSTRAINT PK_UserRole PRIMARY KEY (UserRoleID),
+	CONSTRAINT FK_UserRoleRoleMaster FOREIGN KEY (UserID) REFERENCES UserMaster(UserID),
+	CONSTRAINT FK_UserRolePermissionMaster FOREIGN KEY (RoleID) REFERENCES RoleMaster(RoleID)
+);
